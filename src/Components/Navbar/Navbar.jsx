@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="fixed pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center">
+    <div className="pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center">
       <img
         src="/Store/logo_head.png"
         alt="Logo"
