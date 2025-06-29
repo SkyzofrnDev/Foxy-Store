@@ -10,7 +10,21 @@ const How = () => {
              Questions?
           </div>
         </p>
-        <p className="text-3xl font-normal mt-5">Pertanyaan Yang Sering Ditanyakan</p>
+        <p className="text-3xl font-normal mt-5">
+          Pertanyaan Yang Sering Ditanyakan
+        </p>
+      </div>
+      <div className="flex">
+        <div className="">
+          <p>General</p>
+          <p>General</p>
+          <p>General</p>
+          <p>General</p>
+          <p>General</p>
+        </div>
+        <div className="">
+          <p>Pertanyaan Bjir </p>
+        </div>
       </div>
     </div>
   );

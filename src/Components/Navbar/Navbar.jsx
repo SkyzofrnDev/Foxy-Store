@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center">
+    <div
+      className="select-none pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center"
+    >
       <img
         src="/Store/logo_head.png"
         alt="Logo"
@@ -11,9 +13,14 @@ const Navbar = () => {
       />
       <div className="w-full mt-10 flex justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-y-3">
-          <Link
+          <NavLink
             to="/"
-            className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-12"
+            end
+            className={({ isActive }) =>
+              `p-3 rounded-lg ease-in-out duration-150 mt-12 ${
+                isActive ? "bg-[#42AAFF]" : "hover:bg-[#42AAFF]"
+              }`
+            }
           >
             <img
               src="/Icon/Home.svg"
@@ -21,8 +28,8 @@ const Navbar = () => {
               loading="lazy"
               className="w-8"
             />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
             className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
           >
@@ -32,8 +39,8 @@ const Navbar = () => {
               loading="lazy"
               className="w-7"
             />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
             className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
           >
@@ -43,8 +50,8 @@ const Navbar = () => {
               loading="lazy"
               className="w-7"
             />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
             className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
           >
@@ -54,8 +61,8 @@ const Navbar = () => {
               loading="lazy"
               className="w-6"
             />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
             className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
           >
@@ -65,7 +72,7 @@ const Navbar = () => {
               loading="lazy"
               className="w-7"
             />
-          </Link>
+          </NavLink>
           <div className="border-2 border-[#27282C] w-full mx-7 my-5 "></div>
           <a
             href="https://api.whatsapp.com/send?phone=6289639151016&text=Halo%20min%20fokss%20mau%20tanya%20dong%20%F0%9F%98%80"
@@ -79,9 +86,14 @@ const Navbar = () => {
               className="w-6"
             />
           </a>
-          <Link
+          <NavLink
             to="/faq"
-            className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
+            end
+            className={({ isActive }) =>
+              `p-3 rounded-lg ease-in-out duration-150 mt-10 ${
+                isActive ? "bg-[#42AAFF]" : "hover:bg-[#42AAFF]"
+              }`
+            }
           >
             <img
               src="/Icon/FAQ.svg"
@@ -89,7 +101,7 @@ const Navbar = () => {
               loading="lazy"
               className="w-7"
             />
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
