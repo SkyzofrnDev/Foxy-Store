@@ -9,7 +9,6 @@ import {
 import {
   generalData,
   installationData,
-  contactData,
   bugData
 } from "./Data/FaqData"
 import { Navigate, Route, Routes } from "react-router-dom";

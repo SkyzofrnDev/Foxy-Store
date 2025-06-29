@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div
-      className="select-none pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center"
+      className="mr-20 select-none pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center"
     >
       <img
         src="/Store/logo_head.png"
