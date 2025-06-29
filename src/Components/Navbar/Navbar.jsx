@@ -88,7 +88,7 @@ const Navbar = () => {
           </a>
           <NavLink
             to="/faq"
-            end
+            
             className={({ isActive }) =>
               `p-3 rounded-lg ease-in-out duration-150 mt-10 ${
                 isActive ? "bg-[#42AAFF]" : "hover:bg-[#42AAFF]"
