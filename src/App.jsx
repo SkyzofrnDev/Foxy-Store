@@ -1,11 +1,19 @@
 import "./App.css";
 import React from "react";
-import { Navbar } from "./Components/Index";
+import MainLayout from "./Layout/MainLayout";
+import { Home, How, NotFound } from "./Pages/Index";
+import { Route, Routes } from "react-router-dom";
+
 function App() {
   return (
-    <div className="bg-[#1A1B1F] h-screen w-full">
-      <Navbar />
-    </div>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} /> 
+          <Route path="faq" element={<How />} />
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
   );
 }
 
