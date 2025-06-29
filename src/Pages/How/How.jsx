@@ -1,5 +1,7 @@
 import React from "react";
-
+import { NavLink, Outlet } from "react-router-dom";
+const active = "text-yellow-400";
+const nonActive = "hover:text-white text-gray-400";
 const How = () => {
   return (
     <div>
@@ -15,16 +17,46 @@ const How = () => {
         </p>
       </div>
       <div className="flex">
-        <div className="">
-          <p>General</p>
-          <p>General</p>
-          <p>General</p>
-          <p>General</p>
-          <p>General</p>
-        </div>
-        <div className="">
-          <p>Pertanyaan Bjir </p>
-        </div>
+        <aside className="w-1/4 p-6 border-r border-gray-700">
+          <ul className="space-y-4">
+            <li>
+              <NavLink
+                to="general"
+                className={({ isActive }) => (isActive ? active : nonActive)}
+              >
+                General
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="installation"
+                className={({ isActive }) => (isActive ? active : nonActive)}
+              >
+                Installation
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="contact"
+                className={({ isActive }) => (isActive ? active : nonActive)}
+              >
+                Contact Admin
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="bug"
+                className={({ isActive }) => (isActive ? active : nonActive)}
+              >
+                Lapor Bug
+              </NavLink>
+            </li>
+          </ul>
+        </aside>
+
+        <main className="flex-1 p-6">
+          <Outlet />
+        </main>
       </div>
     </div>
   );
