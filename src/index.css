@@ -2,4 +2,5 @@
 
 body {
   @apply font-sans text-gray-900 bg-white;
+  font-family: 'Plus Jakarta Sans', font-sans;
 }

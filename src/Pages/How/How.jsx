@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 const active = "text-yellow-400";
-const nonActive = "hover:text-white text-gray-400";
+const nonActive = "hover:text-white duration-300 text-gray-400";
 const How = () => {
   return (
     <div>
@@ -16,9 +16,9 @@ const How = () => {
           Pertanyaan Yang Sering Ditanyakan
         </p>
       </div>
-      <div className="flex">
-        <aside className="w-1/4 p-6 border-r border-gray-700">
-          <ul className="space-y-4">
+      <div className="flex mt-20 w-full gap-x-52">
+        <aside className="mt-10">
+          <ul className="space-y-2  text-2xl">
             <li>
               <NavLink
                 to="general"
@@ -35,14 +35,7 @@ const How = () => {
                 Installation
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="contact"
-                className={({ isActive }) => (isActive ? active : nonActive)}
-              >
-                Contact Admin
-              </NavLink>
-            </li>
+
             <li>
               <NavLink
                 to="bug"
