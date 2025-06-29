@@ -13,6 +13,7 @@ import {
 } from "./Data/FaqData"
 import { Navigate, Route, Routes } from "react-router-dom";
 import FaqPage from "./Pages/How/FaqPage";
+import Test from "./Pages/Test/Test";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         </Route>
       </Route>
 
+      <Route path="test" element={<Test />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
