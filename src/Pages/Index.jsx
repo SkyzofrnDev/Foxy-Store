@@ -1,6 +1,3 @@
 export {default as Home } from "./Home/Home"
 export {default as NotFound } from "./NotFound/NotFound"
 export {default as How } from "./How/How"
-export {default as General } from "./How/General"
-export {default as Installation } from "./How/Installation"
-export {default as LaporBug } from "./How/LaporBug"

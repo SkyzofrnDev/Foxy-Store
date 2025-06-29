@@ -16,9 +16,9 @@ const How = () => {
           Pertanyaan Yang Sering Ditanyakan
         </p>
       </div>
-      <div className="flex mt-20 w-full gap-x-52">
-        <aside className="mt-10">
-          <ul className="space-y-2  text-2xl">
+      <div className="flex mt-20 w-full gap-x-36">
+        <aside className="mt-20">
+          <ul className="space-y-2  text-xl">
             <li>
               <NavLink
                 to="general"

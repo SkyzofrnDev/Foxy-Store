@@ -2,11 +2,8 @@ import "./App.css";
 import React from "react";
 import MainLayout from "./Layout/MainLayout";
 import {
-  General,
   Home,
   How,
-  Installation,
-  LaporBug,
   NotFound,
 } from "./Pages/Index";
 import {
