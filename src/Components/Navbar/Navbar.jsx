@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="fixed pr-5 h-screen ml-7 border-r-2 border-[#27282C] justify-center">
       <img
-        src="/Store/Logo.png"
+        src="/Store/logo_head.png"
         alt="Logo"
         loading="lazy"
         className="w-24 mt-12"
