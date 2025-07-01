@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import MainLayout from "./Layout/MainLayout";
 import {
   Home,
   How,
@@ -14,6 +13,7 @@ import {
 import { Navigate, Route, Routes } from "react-router-dom";
 import FaqPage from "./Pages/How/FaqPage";
 import Test from "./Pages/Test/Test";
+import { MainLayout } from "./Layout/Index";
 
 
 function App() {

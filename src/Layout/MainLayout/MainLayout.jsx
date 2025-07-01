@@ -1,8 +1,8 @@
 import React from "react";
-import { Navbar } from "../Components/Index";
+import { Navbar } from "../../Components/Index";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../Components/Footer/Footer";
-import Test from "../Pages/Test/Test";
+import { Footer } from "../../Components/Footer/Footer";
+import { Background } from "../Index";
 
 const MainLayout = () => {
   return (
@@ -11,7 +11,7 @@ const MainLayout = () => {
       <main className="flex-1 p-6 relative bg-transparent z-0 overflow-hidden">
         {/* Background yang mengambang */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <Test />
+          <Background />
         </div>
 
         {/* Konten utama halaman */}
