@@ -110,7 +110,7 @@ const Home = (item) => {
         </div>
 
         {/* Right: Sticky Sidebar */}
-        <div className="w-full pr-10 sticky top-12">
+        <div className="w-fit pr-10 sticky top-12">
           <MostPopular />
         </div>
       </div>
