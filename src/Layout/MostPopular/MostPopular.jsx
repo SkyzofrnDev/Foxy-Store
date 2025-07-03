@@ -33,7 +33,7 @@ const dataGame = [
 
 const MostPopular = () => {
   return (
-    <div className="sticky top-0 flex-1 ml-10">
+    <div className=" flex-1 ml-10">
       <div className="flex flex-col gap-3 w-full">
         <div className="flex gap-3 items-center">
           <img src="/Icon/StickColor.svg" alt="Icon-Stick" loading="lazy" />

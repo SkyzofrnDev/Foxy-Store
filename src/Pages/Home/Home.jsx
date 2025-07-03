@@ -31,11 +31,14 @@ const Home = (item) => {
 
   return (
     <div className="mt-10">
+      {/* Header Section */}
       <div className="flex w-full gap-32 items-center">
         <p className="text-2xl">
           👋 Haloo,{" "}
           <span className="text-[#42AAFF] font-semibold">Pengguna</span>
         </p>
+
+        {/* Search Bar */}
         <div className="h-12 flex items-center w-1/4 bg-[#31313180] rounded-full overflow-hidden cursor-pointer">
           <label htmlFor="input" className="cursor-text px-3 pl-5">
             <svg className="w-[20px]" viewBox="0 0 512 512">
@@ -46,19 +49,21 @@ const Home = (item) => {
             </svg>
           </label>
           <input
-            placeholder="Type your game ...."
             id="input"
             name="text"
             type="text"
+            placeholder="Type your game ...."
             className="w-full h-full border-none outline-none text-md caret-[#ff5100] bg-transparent text-white"
           />
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex mt-10">
+      {/* Main Content */}
+      <div className="flex items-start gap-10 mt-10">
+        {/* Left: Game Showcase */}
+        <div className="w-4xl">
           <div
-            className="relative w-4xl"
+            className="relative"
             style={loaded ? { width: size.width, height: size.height } : {}}
           >
             <img
@@ -96,10 +101,19 @@ const Home = (item) => {
               </div>
             </div>
           </div>
+          <div className="w-full mt-20">
+            <div className="flex gap-5 items-center">
+              <img src="/Icon/Cupon.svg" alt="icon" loading="lazy"  className="w-10 h-fit"/>
+              <p className="text-3xl font-semibold">Most Popular Categories</p>
+            </div>
+          </div>
         </div>
-        <MostPopular />
+
+        {/* Right: Sticky Sidebar */}
+        <div className="w-full pr-10 sticky top-12">
+          <MostPopular />
+        </div>
       </div>
-      
     </div>
   );
 };
