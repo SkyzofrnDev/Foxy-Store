@@ -33,7 +33,7 @@ const dataGame = [
 
 const MostPopular = () => {
   return (
-    <div className="flex-1 ml-10">
+    <div className="sticky top-0 flex-1 ml-10">
       <div className="flex flex-col gap-3 w-full">
         <div className="flex gap-3 items-center">
           <img src="/Icon/StickColor.svg" alt="Icon-Stick" loading="lazy" />
@@ -47,7 +47,7 @@ const MostPopular = () => {
           <div className="flex gap-5">
             <img
               src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-              alt=""
+              alt={games.name + ` img`}
               loading="lazy"
               className="rounded-xl aspect-square w-20"
             />
