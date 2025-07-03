@@ -59,7 +59,7 @@ const Home = (item) => {
       {/* Main Section */}
       <div className="flex mt-10">
         <div
-          className="relative w-2/3"
+          className="relative w-4xl"
           style={loaded ? { width: size.width, height: size.height } : {}}
         >
           <img
@@ -81,7 +81,7 @@ const Home = (item) => {
             <div className="bg-[rgba(35,36,40,0.90)] backdrop-blur-[2px] w-fit flex gap-10 px-5 py-7 rounded-4xl">
               <div className="flex flex-col gap-y-2">
                 <p className="text-2xl font-bold">
-                  🔥 Rp 5.000,<span className="line-through">00</span>
+                  🔥 Rp 5.000,<span className="line-through text-white/70 text-lg">00</span>
                 </p>
                 <p className="text-[#6E6E6E] ml-12 line-through">
                   Rp 205.000,00
