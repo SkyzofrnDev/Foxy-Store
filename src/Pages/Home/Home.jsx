@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { MostPopular } from "../../Layout/Index";
+import { Categories, MostPopular } from "../../Layout/Index";
 
 const Home = (item) => {
   const imgRef = useRef(null);
@@ -101,12 +101,7 @@ const Home = (item) => {
               </div>
             </div>
           </div>
-          <div className="w-full mt-20">
-            <div className="flex gap-5 items-center">
-              <img src="/Icon/Cupon.svg" alt="icon" loading="lazy"  className="w-10 h-fit"/>
-              <p className="text-3xl font-semibold">Most Popular Categories</p>
-            </div>
-          </div>
+          <Categories />
         </div>
 
         {/* Right: Sticky Sidebar */}
