@@ -1,25 +1,6 @@
 import React from "react";
 import { CardCategories } from "../../Components/Index";
-const dataCategories = [
-    {
-      name: "Adventure",
-    },
-    {
-      name: "Survival",
-    },
-    {
-      name: "Battle Royal",
-    },
-    {
-      name: "Story Mode",
-    },
-    {
-      name: "RPG",
-    },
-    {
-      name: "Farming",
-    },
-  ];
+
 const Categories = () => {
   return (
     <div className="w-full mt-20">
@@ -32,11 +13,9 @@ const Categories = () => {
         />
         <p className="text-3xl font-semibold">Most Popular Categories</p>
       </div>
-      {dataCategories.map((data,i) => (
-        <div className="" key={i}>
-            <CardCategories name={data.name}/>
+        <div className="" >
+            <CardCategories/>
         </div>
-    ))}
     </div>
   );
 };

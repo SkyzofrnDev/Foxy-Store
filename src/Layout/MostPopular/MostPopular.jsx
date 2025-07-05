@@ -29,6 +29,24 @@ const dataGame = [
     priceBefore: 250000,
     buy: 2,
   },
+  {
+    name: "Grand Theft Auto V",
+    priceAfter: 5000,
+    priceBefore: 250000,
+    buy: 2,
+  },
+  {
+    name: "Grand Theft Auto V",
+    priceAfter: 5000,
+    priceBefore: 250000,
+    buy: 2,
+  },
+  {
+    name: "Grand Theft Auto V",
+    priceAfter: 5000,
+    priceBefore: 250000,
+    buy: 2,
+  },
 ];
 
 const MostPopular = () => {
