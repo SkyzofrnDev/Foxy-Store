@@ -1,0 +1,6 @@
+.float-idle {
+    position: absolute;
+    will-change: transform;
+    opacity: 0.1;
+  }
+  

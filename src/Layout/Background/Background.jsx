@@ -82,7 +82,7 @@ const Background = () => {
   }, [elements]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidde">
+    <div className="relative w-full h-screen ">
       {elements.map((el) => (
         <img
           key={el.id}

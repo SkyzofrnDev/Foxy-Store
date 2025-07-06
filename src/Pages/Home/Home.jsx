@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Categories, MostPopular } from "../../Layout/Index";
+import { Categories, ListGame, MostPopular } from "../../Layout/Index";
 
 const Home = (item) => {
   const imgRef = useRef(null);
@@ -102,9 +102,9 @@ const Home = (item) => {
             </div>
           </div>
           <Categories />
+          <ListGame/>
         </div>
 
-        {/* Right: Sticky Sidebar */}
         <div className="w-fit pr-10 sticky top-12">
           <MostPopular />
         </div>
