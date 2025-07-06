@@ -14,7 +14,7 @@ const ListGame = () => {
       </div>
       <div className="flex flex-wrap">
         {dataGame.map((item, i) => (
-          <div className="p-10 w-1/3 flex flex-col justify-between items-start">
+          <div className="p-7 w-1/3 flex flex-col justify-between items-start">
             <img
               src={`/Games/${item.img}`}
               alt="cover-game"

@@ -103,6 +103,7 @@ const Home = (item) => {
           </div>
           <Categories />
           <ListGame/>
+          
         </div>
 
         <div className="w-fit pr-10 sticky top-12">
