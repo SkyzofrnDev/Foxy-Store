@@ -1,32 +1,172 @@
 [
   {
-    "name": "Grand Theft Auto 5",
-    "priceAfter": "5000",
-    "priceBefore": "10000",
-    "img": "Grand-Theft-Auto-V/cover-gta.jpg"
+    "id": "elden-ring",
+    "name": "Elden Ring",
+    "priceBefore": 799000,
+    "priceAfter": 499000,
+    "buy": 1200000,
+    "description": "Elden Ring adalah action RPG yang dikembangkan oleh FromSoftware dan dipublikasikan oleh Bandai Namco. Game ini menawarkan dunia terbuka yang luas, pertarungan yang menantang, dan cerita mendalam yang ditulis bersama George R. R. Martin. Pemain bebas menjelajah dan mengembangkan karakternya dalam dunia penuh misteri dan bahaya.",
+    "images": {
+      "cover": "/EldenRing/cover.jpg",
+      "background": "/EldenRing/bg.jpg",
+      "previews": [
+        "/EldenRing/preview1.jpg",
+        "/EldenRing/preview2.jpg",
+        "/EldenRing/preview3.jpg"
+      ]
+    },
+    "categories": ["RPG", "Open World", "Action"],
+    "specifications": {
+      "minimum": {
+        "Operating System": "Windows 10",
+        "Processor": "Intel Core i5-8400 / AMD Ryzen 3 3300X",
+        "Memory": "12 GB RAM",
+        "Graphics Card": "NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB",
+        "Storage": "60 GB available space"
+      },
+      "recommended": {
+        "Operating System": "Windows 10/11",
+        "Processor": "Intel Core i7-8700K / AMD Ryzen 5 3600X",
+        "Memory": "16 GB RAM",
+        "Graphics Card": "NVIDIA GeForce GTX 1070 8GB / AMD Radeon RX Vega 56",
+        "Storage": "60 GB available space"
+      }
+    }
   },
   {
-    "name": "Grand Theft Auto 5 Limited",
-    "priceAfter": "5000",
-    "priceBefore": "10000",
-    "img": "Grand-Theft-Auto-V/cover-gta.jpg"
+    "id": "grand-theft-auto-v",
+    "name": "Grand Theft Auto V",
+    "priceBefore": 499000,
+    "priceAfter": 209000,
+    "buy": 180000000,
+    "description": "Grand Theft Auto V adalah game aksi petualangan dunia terbuka dari Rockstar Games. Pemain mengendalikan tiga karakter berbeda dalam dunia Los Santos yang luas dan bebas. Dengan misi kriminal, kendaraan mewah, serta kebebasan eksplorasi, GTA V menjadi salah satu game paling sukses sepanjang masa.",
+    "images": {
+      "cover": "/GTA5/cover.jpg",
+      "background": "/GTA5/bg.jpg",
+      "previews": [
+        "/GTA5/preview1.jpg",
+        "/GTA5/preview2.jpg",
+        "/GTA5/preview3.jpg"
+      ]
+    },
+    "categories": ["Action", "Open World", "Multiplayer"],
+    "specifications": {
+      "minimum": {
+        "Operating System": "Windows 7 64-bit",
+        "Processor": "Intel Core 2 Quad CPU Q6600 / AMD Phenom 9850",
+        "Memory": "4 GB RAM",
+        "Graphics Card": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB",
+        "Storage": "72 GB available space"
+      },
+      "recommended": {
+        "Operating System": "Windows 10 64-bit",
+        "Processor": "Intel Core i5 3470 / AMD X8 FX-8350",
+        "Memory": "8 GB RAM",
+        "Graphics Card": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+        "Storage": "72 GB available space"
+      }
+    }
   },
   {
-    "name": "Grand Theft Auto 5",
-    "priceAfter": "5000",
-    "priceBefore": "10000",
-    "img": "Grand-Theft-Auto-V/cover-gta.jpg"
+    "id": "red-dead-redemption-2",
+    "name": "Red Dead Redemption 2",
+    "priceBefore": 749000,
+    "priceAfter": 499000,
+    "buy": 64000000,
+    "description": "Red Dead Redemption 2 adalah game aksi-petualangan dengan latar Amerika tahun 1899. Pemain mengikuti kisah Arthur Morgan, seorang penjahat di era akhir Wild West. Dunia terbuka yang imersif dan narasi yang kuat menjadikan game ini salah satu karya terbaik dari Rockstar Games.",
+    "images": {
+      "cover": "/RDR2/cover.jpg",
+      "background": "/RDR2/bg.jpg",
+      "previews": [
+        "/RDR2/preview1.jpg",
+        "/RDR2/preview2.jpg",
+        "/RDR2/preview3.jpg"
+      ]
+    },
+    "categories": ["Adventure", "Story Mode", "Open World"],
+    "specifications": {
+      "minimum": {
+        "Operating System": "Windows 7 - Service Pack 1",
+        "Processor": "Intel Core i5-2500K / AMD FX-6300",
+        "Memory": "8 GB RAM",
+        "Graphics Card": "NVIDIA GeForce GTX 770 2GB / AMD Radeon R9 280",
+        "Storage": "150 GB available space"
+      },
+      "recommended": {
+        "Operating System": "Windows 10 - April 2018 Update",
+        "Processor": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
+        "Memory": "12 GB RAM",
+        "Graphics Card": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+        "Storage": "150 GB available space"
+      }
+    }
   },
   {
-    "name": "Grand Theft Auto 5",
-    "priceAfter": "5000",
-    "priceBefore": "10000",
-    "img": "Grand-Theft-Auto-V/cover-gta.jpg"
+    "id": "stardew-valley",
+    "name": "Stardew Valley",
+    "priceBefore": 150000,
+    "priceAfter": 85000,
+    "buy": 30000000,
+    "description": "Stardew Valley adalah game simulasi pertanian di mana pemain mengelola ladang, berinteraksi dengan penduduk desa, membangun hubungan, dan menjelajahi gua penuh monster. Meskipun sederhana, gameplay-nya sangat dalam dan memberikan pengalaman relaksasi dan eksplorasi.",
+    "images": {
+      "cover": "/StardewValley/cover.jpg",
+      "background": "/StardewValley/bg.jpg",
+      "previews": [
+        "/StardewValley/preview1.jpg",
+        "/StardewValley/preview2.jpg",
+        "/StardewValley/preview3.jpg"
+      ]
+    },
+    "categories": ["Farming", "Simulation", "Indie"],
+    "specifications": {
+      "minimum": {
+        "Operating System": "Windows Vista or greater",
+        "Processor": "2 GHz",
+        "Memory": "2 GB RAM",
+        "Graphics Card": "256 MB video memory, shader model 3.0+",
+        "Storage": "500 MB available space"
+      },
+      "recommended": {
+        "Operating System": "Windows 10",
+        "Processor": "2.5 GHz",
+        "Memory": "4 GB RAM",
+        "Graphics Card": "512 MB video memory",
+        "Storage": "500 MB available space"
+      }
+    }
   },
   {
-    "name": "Grand Theft Auto 5",
-    "priceAfter": "5000",
-    "priceBefore": "10000",
-    "img": "Grand-Theft-Auto-V/cover-gta.jpg"
+    "id": "minecraft",
+    "name": "Minecraft",
+    "priceBefore": 399000,
+    "priceAfter": 319000,
+    "buy": 300000000,
+    "description": "Minecraft adalah game sandbox legendaris di mana pemain dapat membangun dunia dari blok, menjelajahi, bertahan hidup, atau berkreasi tanpa batas. Dengan mode survival dan creative, Minecraft menawarkan kebebasan tak terbatas untuk semua jenis pemain.",
+    "images": {
+      "cover": "/Minecraft/cover.jpg",
+      "background": "/Minecraft/bg.jpg",
+      "previews": [
+        "/Minecraft/preview1.jpg",
+        "/Minecraft/preview2.jpg",
+        "/Minecraft/preview3.jpg"
+      ]
+    },
+    "categories": ["Survival", "Sandbox", "Multiplayer"],
+    "specifications": {
+      "minimum": {
+        "Operating System": "Windows 7 and up",
+        "Processor": "Intel Core i3-3210 / AMD A8-7600",
+        "Memory": "4 GB RAM",
+        "Graphics Card": "Intel HD Graphics 4000 / AMD Radeon R5",
+        "Storage": "1 GB available space"
+      },
+      "recommended": {
+        "Operating System": "Windows 10",
+        "Processor": "Intel Core i5-4690 / AMD A10-7800",
+        "Memory": "8 GB RAM",
+        "Graphics Card": "GeForce 700 Series / AMD Radeon Rx 200",
+        "Storage": "4 GB available space"
+      }
+    }
   }
 ]

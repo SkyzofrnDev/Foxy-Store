@@ -1,57 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import games from "../../Data/Games.json";
 
 const formatRupiah = (price) => {
   return "Rp " + price.toLocaleString("id-ID");
 };
-const dataGame = [
-  {
-    name: "Grand Theft Auto 1",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 1,
-  },
-  {
-    name: "Spiderman No Way Home",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 10,
-  },
-  {
-    name: "Red Dead Redemption 2    ",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 4,
-  },
-  {
-    name: "Grand Theft Auto V",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 5,
-  },
-  {
-    name: "Grand Theft Auto V",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 2,
-  },
-  {
-    name: "Grand Theft Auto V",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 2,
-  },
-  {
-    name: "Grand Theft Auto V",
-    priceAfter: 5000,
-    priceBefore: 250000,
-    buy: 2,
-  },
-];
 
 const MostPopular = () => {
   return (
-    <div className=" flex-1 ml-10">
+    <div className="flex-1 ml-10">
       <div className="flex flex-col gap-3 w-full">
         <div className="flex gap-5 items-center">
           <img src="/Icon/StickColor.svg" alt="Icon-Stick" loading="lazy" />
@@ -59,11 +16,12 @@ const MostPopular = () => {
         </div>
         <div className="border-b-4 border-[#27282C] w-full" />
       </div>
-      {[...dataGame]
+
+      {[...games]
         .sort((a, b) => b.buy - a.buy)
         .slice(0, 6)
-        .map((games, index) => (
-          <Link to="/" key={index}>
+        .map((game, index) => (
+          <Link to={`/produk/${game.id}`} key={game.id}>
             <div className="flex w-full justify-between gap-x-12 items-center mt-10">
               <div className="flex gap-5 items-center">
                 {/* Tag # */}
@@ -75,24 +33,24 @@ const MostPopular = () => {
                   ) : index === 2 ? (
                     <span className="text-orange-600">#{index + 1}</span>
                   ) : (
-                    <span className="text-white"></span>
+                    <span></span>
                   )}
                 </div>
 
                 <img
-                  src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-                  alt={games.name + ` img`}
+                  src={game.images.cover}
+                  alt={`${game.name} img`}
                   loading="lazy"
                   className="rounded-xl aspect-square w-20"
                 />
                 <div className="flex flex-col justify-center">
-                  <p className="text-xl font-bold">{games.name}</p>
+                  <p className="text-xl font-bold">{game.name}</p>
                   <div className="flex gap-5 mt-2 text-lg">
                     <p className="font-semibold">
-                      🔥 <span>{formatRupiah(games.priceAfter)}</span>
+                      🔥 {formatRupiah(game.priceAfter)}
                     </p>
                     <p className="line-through text-[#6E6E6E]">
-                      {formatRupiah(games.priceBefore)}
+                      {formatRupiah(game.priceBefore)}
                     </p>
                   </div>
                 </div>

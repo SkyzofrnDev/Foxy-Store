@@ -15,7 +15,6 @@ import FaqPage from "./Pages/How/FaqPage";
 import Test from "./Pages/Test/Test";
 import { MainLayout } from "./Layout/Index";
 
-
 function App() {
   return (
     <Routes>
