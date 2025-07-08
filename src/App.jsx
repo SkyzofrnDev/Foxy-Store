@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import {
+  DetailGame,
   Home,
   How,
   NotFound,
@@ -26,9 +27,10 @@ function App() {
           <Route path="installation" element={<FaqPage title="Installation Question" data={installationData} />} />
           <Route path="bug" element={<FaqPage title="Lapor Bug" data={bugData} />}/>
         </Route>
+      <Route path="test" element={<Test />} />
+      <Route path="/produk/:id" element={<DetailGame />} />
       </Route>
 
-      <Route path="test" element={<Test />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

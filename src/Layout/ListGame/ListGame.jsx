@@ -1,5 +1,7 @@
 import React from "react";
 import dataGame from "../../Data/Games.json";
+import { Link } from "react-router-dom";
+
 const ListGame = () => {
   return (
     <div className="mt-20">
@@ -8,13 +10,13 @@ const ListGame = () => {
           src="/Icon/StickColor.svg"
           alt="Icon-Stick"
           loading="lazy"
-          srcset=""
         />
         <p className="font-semibold text-3xl">List Game PC</p>
       </div>
       <div className="flex flex-wrap">
         {dataGame.map((item, i) => (
-          <div className="p-7 w-1/3 flex flex-col justify-between items-start">
+          <Link to={`/produk/${item.id}`} className="p-7 w-1/3 flex" key={i} >
+          <div className="flex flex-col justify-between items-start" >
             <img
               src={`/Games/${item.img}`}
               alt="cover-game"
@@ -27,6 +29,7 @@ const ListGame = () => {
             </p>
             <p className="text-[#6e6e6e] mt-1 line-through ">Rp {item.priceBefore},00</p>
           </div>
+          </Link>
         ))}
       </div>
     </div>

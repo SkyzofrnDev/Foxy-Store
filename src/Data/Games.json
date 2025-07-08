@@ -6,15 +6,13 @@
     "priceAfter": 499000,
     "buy": 1200000,
     "description": "Elden Ring adalah action RPG yang dikembangkan oleh FromSoftware dan dipublikasikan oleh Bandai Namco. Game ini menawarkan dunia terbuka yang luas, pertarungan yang menantang, dan cerita mendalam yang ditulis bersama George R. R. Martin. Pemain bebas menjelajah dan mengembangkan karakternya dalam dunia penuh misteri dan bahaya.",
-    "images": {
-      "cover": "/EldenRing/cover.jpg",
-      "background": "/EldenRing/bg.jpg",
-      "previews": [
-        "/EldenRing/preview1.jpg",
-        "/EldenRing/preview2.jpg",
-        "/EldenRing/preview3.jpg"
-      ]
-    },
+    "images": [
+      { "type": "cover", "url": "/EldenRing/cover.jpg" },
+      { "type": "background", "url": "/EldenRing/bg.jpg" },
+      { "type": "preview", "url": "/EldenRing/preview1.jpg" },
+      { "type": "preview", "url": "/EldenRing/preview2.jpg" },
+      { "type": "preview", "url": "/EldenRing/preview3.jpg" }
+    ],
     "categories": ["RPG", "Open World", "Action"],
     "specifications": {
       "minimum": {
@@ -40,15 +38,13 @@
     "priceAfter": 209000,
     "buy": 180000000,
     "description": "Grand Theft Auto V adalah game aksi petualangan dunia terbuka dari Rockstar Games. Pemain mengendalikan tiga karakter berbeda dalam dunia Los Santos yang luas dan bebas. Dengan misi kriminal, kendaraan mewah, serta kebebasan eksplorasi, GTA V menjadi salah satu game paling sukses sepanjang masa.",
-    "images": {
-      "cover": "/GTA5/cover.jpg",
-      "background": "/GTA5/bg.jpg",
-      "previews": [
-        "/GTA5/preview1.jpg",
-        "/GTA5/preview2.jpg",
-        "/GTA5/preview3.jpg"
-      ]
-    },
+    "images": [
+      { "type": "cover", "url": "/GTA5/cover.jpg" },
+      { "type": "background", "url": "/GTA5/bg.jpg" },
+      { "type": "preview", "url": "/GTA5/preview1.jpg" },
+      { "type": "preview", "url": "/GTA5/preview2.jpg" },
+      { "type": "preview", "url": "/GTA5/preview3.jpg" }
+    ],
     "categories": ["Action", "Open World", "Multiplayer"],
     "specifications": {
       "minimum": {
@@ -74,15 +70,13 @@
     "priceAfter": 499000,
     "buy": 64000000,
     "description": "Red Dead Redemption 2 adalah game aksi-petualangan dengan latar Amerika tahun 1899. Pemain mengikuti kisah Arthur Morgan, seorang penjahat di era akhir Wild West. Dunia terbuka yang imersif dan narasi yang kuat menjadikan game ini salah satu karya terbaik dari Rockstar Games.",
-    "images": {
-      "cover": "/RDR2/cover.jpg",
-      "background": "/RDR2/bg.jpg",
-      "previews": [
-        "/RDR2/preview1.jpg",
-        "/RDR2/preview2.jpg",
-        "/RDR2/preview3.jpg"
-      ]
-    },
+    "images": [
+      { "type": "cover", "url": "/RDR2/cover.jpg" },
+      { "type": "background", "url": "/RDR2/bg.jpg" },
+      { "type": "preview", "url": "/RDR2/preview1.jpg" },
+      { "type": "preview", "url": "/RDR2/preview2.jpg" },
+      { "type": "preview", "url": "/RDR2/preview3.jpg" }
+    ],
     "categories": ["Adventure", "Story Mode", "Open World"],
     "specifications": {
       "minimum": {
@@ -108,15 +102,13 @@
     "priceAfter": 85000,
     "buy": 30000000,
     "description": "Stardew Valley adalah game simulasi pertanian di mana pemain mengelola ladang, berinteraksi dengan penduduk desa, membangun hubungan, dan menjelajahi gua penuh monster. Meskipun sederhana, gameplay-nya sangat dalam dan memberikan pengalaman relaksasi dan eksplorasi.",
-    "images": {
-      "cover": "/StardewValley/cover.jpg",
-      "background": "/StardewValley/bg.jpg",
-      "previews": [
-        "/StardewValley/preview1.jpg",
-        "/StardewValley/preview2.jpg",
-        "/StardewValley/preview3.jpg"
-      ]
-    },
+    "images": [
+      { "type": "cover", "url": "/StardewValley/cover.jpg" },
+      { "type": "background", "url": "/StardewValley/bg.jpg" },
+      { "type": "preview", "url": "/StardewValley/preview1.jpg" },
+      { "type": "preview", "url": "/StardewValley/preview2.jpg" },
+      { "type": "preview", "url": "/StardewValley/preview3.jpg" }
+    ],
     "categories": ["Farming", "Simulation", "Indie"],
     "specifications": {
       "minimum": {
@@ -142,15 +134,13 @@
     "priceAfter": 319000,
     "buy": 300000000,
     "description": "Minecraft adalah game sandbox legendaris di mana pemain dapat membangun dunia dari blok, menjelajahi, bertahan hidup, atau berkreasi tanpa batas. Dengan mode survival dan creative, Minecraft menawarkan kebebasan tak terbatas untuk semua jenis pemain.",
-    "images": {
-      "cover": "/Minecraft/cover.jpg",
-      "background": "/Minecraft/bg.jpg",
-      "previews": [
-        "/Minecraft/preview1.jpg",
-        "/Minecraft/preview2.jpg",
-        "/Minecraft/preview3.jpg"
-      ]
-    },
+    "images": [
+      { "type": "cover", "url": "/Minecraft/cover.jpg" },
+      { "type": "background", "url": "/Minecraft/bg.jpg" },
+      { "type": "preview", "url": "/Minecraft/preview1.jpg" },
+      { "type": "preview", "url": "/Minecraft/preview2.jpg" },
+      { "type": "preview", "url": "/Minecraft/preview3.jpg" }
+    ],
     "categories": ["Survival", "Sandbox", "Multiplayer"],
     "specifications": {
       "minimum": {
