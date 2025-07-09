@@ -17,7 +17,7 @@ const Home = (item) => {
         setLoaded(true);
       }
     };
-    const randomIndex = Math.floor(Math.random()* games.length);
+    const randomIndex = Math.floor(Math.random() * games.length);
     setRandomGame(games[randomIndex]);
 
     const img = imgRef.current;
@@ -33,9 +33,7 @@ const Home = (item) => {
       }
     };
   }, []);
-  if(!randomGame) return null;
-
-  
+  if (!randomGame) return null;
 
   return (
     <div className="mt-10">
@@ -74,7 +72,7 @@ const Home = (item) => {
           >
             <img
               ref={imgRef}
-              src={`/Games${randomGame.images.find(img => img.type == "background")?.url}`}
+              src={`/Games${randomGame.images.find((img) => img.type == "background")?.url}`}
               alt="cover-game"
               loading="lazy"
               className="absolute aspect-video w-full -z-10 rounded-[2.8vw] border-4 border-[#6E6E6E] brightness-50"
@@ -86,25 +84,25 @@ const Home = (item) => {
                 </div>
                 <p className="text-5xl font-bold">{randomGame.name}</p>
               </div>
-              <div className="bg-[rgba(35,36,40,0.90)] backdrop-blur-[2px] w-fit flex gap-10 px-5 py-7 rounded-4xl">
-                <div className="flex flex-col gap-y-2">
-                  <p className="text-2xl font-bold">
-                    🔥 {randomGame.priceAfter.toLocaleString("id-ID")}
-                    <span className="line-through text-white/70 text-lg">
-                      00
-                    </span>
-                  </p>
-                  <p className="text-[#6E6E6E] ml-12 line-through">
-                    Rp {randomGame.priceBefore.toLocaleString("id-ID")}
-                  </p>
-                </div>
                 <Link to={`/produk/${randomGame.id}`}>
-                <div className="flex px-5 gap-3 rounded-2xl py-5 w-fit bg-gradient-to-r from-[#4196CA] to-[#2042CA] shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,0.05)]">
-                  <img src="/Icon/Cart.svg" loading="lazy" alt="Cart" />
-                  <p className="text-2xl font-semibold">Buy</p>
-                </div>
-                </Link>
+              <div className="bg-[rgba(35,36,40,0.90)] backdrop-blur-[2px] w-fit flex gap-10 px-5 py-7 rounded-4xl">
+                  <div className="flex flex-col gap-y-2">
+                    <p className="text-2xl font-bold">
+                      🔥 {randomGame.priceAfter.toLocaleString("id-ID")}
+                      <span className="line-through text-white/70 text-lg">
+                        ,00
+                      </span>
+                    </p>
+                    <p className="text-[#6E6E6E] ml-12 line-through">
+                      Rp {randomGame.priceBefore.toLocaleString("id-ID")}
+                    </p>
+                  </div>
+                  <div className="flex px-5 gap-3 rounded-2xl py-5 w-fit bg-gradient-to-r from-[#4196CA] to-[#2042CA] shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,0.05)]">
+                    <img src="/Icon/Cart.svg" loading="lazy" alt="Cart" />
+                    <p className="text-2xl font-semibold">Buy</p>
+                  </div>
               </div>
+                </Link>
             </div>
           </div>
           <Categories />
