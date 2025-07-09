@@ -38,7 +38,7 @@ const MostPopular = () => {
                 </div>
 
                 <img
-                  src={game.images.cover}
+                  src={`/Games${game.images.find(img => img.type === "cover")?.url}`}
                   alt={`${game.name} img`}
                   loading="lazy"
                   className="rounded-xl aspect-square w-20"

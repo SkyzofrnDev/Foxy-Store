@@ -39,11 +39,11 @@
     "buy": 180000000,
     "description": "Grand Theft Auto V adalah game aksi petualangan dunia terbuka dari Rockstar Games. Pemain mengendalikan tiga karakter berbeda dalam dunia Los Santos yang luas dan bebas. Dengan misi kriminal, kendaraan mewah, serta kebebasan eksplorasi, GTA V menjadi salah satu game paling sukses sepanjang masa.",
     "images": [
-      { "type": "cover", "url": "/GTA5/cover.jpg" },
-      { "type": "background", "url": "/GTA5/bg.jpg" },
-      { "type": "preview", "url": "/GTA5/preview1.jpg" },
-      { "type": "preview", "url": "/GTA5/preview2.jpg" },
-      { "type": "preview", "url": "/GTA5/preview3.jpg" }
+      { "type": "cover", "url": "/Grand-Theft-Auto-V/cover-gta.jpg" },
+      { "type": "background", "url": "/Grand-Theft-Auto-V/bg-gta.jpeg" },
+      { "type": "preview", "url": "/Grand-Theft-Auto-V/bg-gta.jpeg" },
+      { "type": "preview", "url": "/Grand-Theft-Auto-V/bg-gta.jpeg" },
+      { "type": "preview", "url": "/Grand-Theft-Auto-V/bg-gta.jpeg" }
     ],
     "categories": ["Action", "Open World", "Multiplayer"],
     "specifications": {

@@ -18,7 +18,7 @@ const ListGame = () => {
           <Link to={`/produk/${item.id}`} className="p-7 w-1/3 flex" key={i} >
           <div className="flex flex-col justify-between items-start" >
             <img
-              src={`/Games/${item.img}`}
+              src={`/Games${item.images.find(img => img.type === "cover")?.url}`}
               alt="cover-game"
               loading="lazy"
               className="aspect-square rounded-4xl"

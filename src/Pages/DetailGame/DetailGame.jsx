@@ -32,7 +32,6 @@ const DetailGame = () => {
       </div>
     );
   }
-  const cover = game.images.find((img) => img.type === "cover");
 
   const DetailTab = () => (
     <div className="flex flex-col gap-y-10">
@@ -72,7 +71,7 @@ const DetailGame = () => {
 
   return (
     <div className="flex pr-10">
-      <div className="mt-20 w-4/5">
+      <div className="mt-20 w-4/5 pr-20">
         <div className="gap-x-20 flex items-center">
           <div className="flex gap-5 items-center">
             <img src="/Icon/Joypad.svg" alt="Joypad-Icon" loading="lazy" />
@@ -130,32 +129,29 @@ const DetailGame = () => {
           {activeTab === "detail" ? <DetailTab /> : <Spectification />}
         </div>
       </div>
-      <div className="flex flex-col w-3/6 p-10 gap-10 relative top-50">
-        <img
-          src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-          loading="lazy"
-          alt="img-1"
-          className="w-full h-[25rem]"
-        />
+      <div className="flex flex-col w-2/5 p-10 gap-10 relative top-50">
+        {game.images
+          .filter((img) => img.type === "cover")
+          .map((img,i) => (
+            <img
+            key={i}
+              src={`/Games/${img.url}`}
+              loading="lazy"
+              alt={`image-${img.type}`}
+              className="object-cover aspect-square"
+            />
+          ))}
         <div className="flex">
-          <img
-            src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-            className=" object-cover w-1/3 rounded-2xl aspect-square px-2"
-            loading="lazy"
-            alt="img-child"
-          />
-          <img
-            src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-            className=" object-cover w-1/3 rounded-2xl aspect-square px-2"
-            loading="lazy"
-            alt="img-child"
-          />
-          <img
-            src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-            className=" object-cover w-1/3 rounded-2xl aspect-square px-2"
-            loading="lazy"
-            alt="img-child"
-          />
+          {game.images
+            .filter((img) => img.type === "preview")
+            .map((img, i) => (
+              <img
+                key={i}
+                src={`/Games${img.url}`}
+                className="object-cover w-1/3 rounded-2xl aspect-square px-2"
+                alt={`preview-${i}`}
+              />
+            ))}
         </div>
       </div>
     </div>
