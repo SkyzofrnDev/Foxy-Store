@@ -8,7 +8,29 @@ const Test = () => {
         <img src="/Icon/CartColor.svg" loading="lazy" alt="icon-cart" />
         <p className="text-4xl font-semibold">My Shopping Cart</p>
       </div>
-      <CardProduct/>
+      <div className="mt-20 flex gap-x-10">
+        <div className="w-full">
+          <CardProduct />
+        </div>
+        <div className="w-3/5 bg-[#27282C] px-7 py-5 rounded-2xl">
+          <div className=" border-b-2 border-white/20 pb-12">
+            <p className="text-4xl font-semibold">Invoice Payment</p>
+            <p className="text-3xl font-medium mt-10">Order Sumary</p>
+            <div className="flex items-center font-thin text-white/45 justify-between w-full mt-3">
+              <p className="w-1/2">
+                Grand Theft Auto - V Bundling Online Mode{" "}
+              </p>
+              <p className="">5x</p>
+            </div>
+            <div className="justify-between flex">
+              <p className="text-end text-2xl font-semibold mt-10">
+                Subtotal :
+              </p>
+              <p className="text-end text-2xl font-semibold mt-10">Rp 20.500</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
