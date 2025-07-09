@@ -25,7 +25,7 @@ const ListGame = () => {
             />
             <p className="font-semibold text-2xl">{item.name} </p>
             <p className="font-bold text-[#4196CA] text-xl mt-1">
-              🔥 Rp {item.priceAfter},00
+              🔥 Rp {item.priceAfter.toLocaleString("id-ID")} <span className="text-base font-normal text-white/20">,00</span>
             </p>
             <p className="text-[#6e6e6e] mt-1 line-through ">Rp {item.priceBefore},00</p>
           </div>

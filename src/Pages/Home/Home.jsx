@@ -1,10 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import { Categories, ListGame, MostPopular } from "../../Layout/Index";
+import games from "../../Data/Games.json";
+import { Link } from "react-router-dom";
 
 const Home = (item) => {
   const imgRef = useRef(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
   const [loaded, setLoaded] = useState(false);
+  const [randomGame, setRandomGame] = useState(null);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -14,6 +17,8 @@ const Home = (item) => {
         setLoaded(true);
       }
     };
+    const randomIndex = Math.floor(Math.random()* games.length);
+    setRandomGame(games[randomIndex]);
 
     const img = imgRef.current;
     if (img && img.complete) {
@@ -28,6 +33,9 @@ const Home = (item) => {
       }
     };
   }, []);
+  if(!randomGame) return null;
+
+  
 
   return (
     <div className="mt-10">
@@ -58,17 +66,15 @@ const Home = (item) => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex items-start gap-10 mt-10">
-        {/* Left: Game Showcase */}
         <div className="w-4xl">
           <div
-            className="relative"
+            className="relative h-[32rem]"
             style={loaded ? { width: size.width, height: size.height } : {}}
           >
             <img
               ref={imgRef}
-              src="/Games/Grand-Theft-Auto-V/bg-gta.jpeg"
+              src={`/Games${randomGame.images.find(img => img.type == "background")?.url}`}
               alt="cover-game"
               loading="lazy"
               className="absolute aspect-video w-full -z-10 rounded-[2.8vw] border-4 border-[#6E6E6E] brightness-50"
@@ -78,32 +84,31 @@ const Home = (item) => {
                 <div className="rounded-full w-fit text-xl font-semibold px-5 py-2 bg-gradient-to-r from-[#4196CA] to-[#2042CA] shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,0.05)]">
                   🔥 New Game!
                 </div>
-                <p className="text-5xl font-bold">
-                  Lorem Ipsum - Sit Dolor Amet : Assallamualaikum Ahmed
-                </p>
+                <p className="text-5xl font-bold">{randomGame.name}</p>
               </div>
               <div className="bg-[rgba(35,36,40,0.90)] backdrop-blur-[2px] w-fit flex gap-10 px-5 py-7 rounded-4xl">
                 <div className="flex flex-col gap-y-2">
                   <p className="text-2xl font-bold">
-                    🔥 Rp 5.000,
+                    🔥 {randomGame.priceAfter.toLocaleString("id-ID")}
                     <span className="line-through text-white/70 text-lg">
                       00
                     </span>
                   </p>
                   <p className="text-[#6E6E6E] ml-12 line-through">
-                    Rp 205.000,00
+                    Rp {randomGame.priceBefore.toLocaleString("id-ID")}
                   </p>
                 </div>
+                <Link to={`/produk/${randomGame.id}`}>
                 <div className="flex px-5 gap-3 rounded-2xl py-5 w-fit bg-gradient-to-r from-[#4196CA] to-[#2042CA] shadow-[inset_0px_0px_10px_5px_rgba(255,255,255,0.05)]">
                   <img src="/Icon/Cart.svg" loading="lazy" alt="Cart" />
                   <p className="text-2xl font-semibold">Buy</p>
                 </div>
+                </Link>
               </div>
             </div>
           </div>
           <Categories />
-          <ListGame/>
-          
+          <ListGame />
         </div>
 
         <div className="w-fit pr-10 sticky top-12">
