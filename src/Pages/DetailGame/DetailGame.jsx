@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import dataGame from "../../Data/Games.json";
 
@@ -13,6 +13,18 @@ const DetailGame = () => {
       currency: "IDR",
       minimumFractionDigits: 0,
     }).format(value);
+
+  const navigate = useNavigate();
+
+  const handleBuy = () => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const alreadyInCart = storedCart.some((item) => item.id === game.id);
+    if (!alreadyInCart) {
+      storedCart.push({ ...game, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(storedCart));
+    }
+    navigate("/checkout");
+  };
 
   if (!game) {
     return (
@@ -120,10 +132,13 @@ const DetailGame = () => {
               Spectification
             </button>
           </div>
-          <div className="flex gap-5 bg-[#4196CA] rounded-full px-5 py-3 text-3xl font-bold items-center w-fit absolute right-0 top-7">
+          <button
+            onClick={handleBuy}
+            className="flex gap-5 bg-[#4196CA] rounded-full px-5 py-3 text-3xl font-bold items-center w-fit absolute right-0 top-7"
+          >
             <img src="/Icon/Cart.svg" alt="icon-cart" loading="lazy" />
             <p>Buy</p>
-          </div>
+          </button>
         </div>
         <div className="mt-20 ">
           {activeTab === "detail" ? <DetailTab /> : <Spectification />}
@@ -132,9 +147,9 @@ const DetailGame = () => {
       <div className="flex flex-col w-2/5 p-10 gap-10 relative top-50">
         {game.images
           .filter((img) => img.type === "cover")
-          .map((img,i) => (
+          .map((img, i) => (
             <img
-            key={i}
+              key={i}
               src={`/Games/${img.url}`}
               loading="lazy"
               alt={`image-${img.type}`}

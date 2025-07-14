@@ -12,7 +12,7 @@ const Test = () => {
         <div className="w-full">
           <CardProduct />
         </div>
-        <div className="w-3/5 bg-[#27282C] px-7 py-5 rounded-2xl">
+        <div className="w-3/5 bg-[#27282C] px-7 py-5 rounded-2xl sticky">
           <div className=" border-b-2 border-white/20 pb-12">
             <p className="text-4xl font-semibold">Invoice Payment</p>
             <p className="text-3xl font-medium mt-10">Order Sumary</p>
@@ -22,13 +22,14 @@ const Test = () => {
               </p>
               <p className="">5x</p>
             </div>
-            <div className="justify-between flex">
-              <p className="text-end text-2xl font-semibold mt-10">
-                Subtotal :
-              </p>
-              <p className="text-end text-2xl font-semibold mt-10">Rp 20.500</p>
+            <div className="justify-between flex mt-10">
+              <p className="text-end text-2xl font-semibold ">Subtotal :</p>
+              <p className="text-end text-2xl font-semibold">Rp 20.500</p>
             </div>
           </div>
+          <button className="bg-[#4196CA] w-full rounded-xl mt-10 text-2 xl font-semibold py-2">
+            Buy Now
+          </button>
         </div>
       </div>
     </div>

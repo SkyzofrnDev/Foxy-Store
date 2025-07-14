@@ -1,42 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CardProduct = () => {
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(storedCart);
+  }, []);
+
+  const formatRupiah = (angka) => {
+    return angka.toLocaleString("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    });
+  };
+
+  const handleRemove = (id) => {
+    const updated = cart.filter((item) => item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(updated));
+    setCart(updated);
+  };
+
   return (
-    <div className="justify-between px-2 pr-20 py-2 flex bg-[#27282C] rounded-2xl items-center">
-      <div className="flex gap-5">
-        <img
-          src="/Games/Grand-Theft-Auto-V/cover-gta.jpg"
-          loading="lazy"
-          alt="cover-game"
-          className="aspect-square object-cover w-24 rounded-2xl"
-        />
-        <div className="flex flex-col justify-between">
-          <div>
-            <p className="text-2xl font-semibold">
-              Grand Theft Auto V - Bundling Online Mode
-            </p>
-            <p className="text-lg text-white/20">Rockstar Games</p>
-          </div>
-          <div className="flex gap-x-3 items-center">
-            <p className="text-white/20 line-through">Rp 500.000,00 </p>
+    <div className="space-y-5">
+      {cart.map((game) => (
+        <div
+          className="justify-between px-2 pr-20 py-2 flex bg-[#27282C] rounded-2xl items-center"
+          key={game.id}
+        >
+          <div className="flex gap-5">
             <img
-              src="/Icon/Arrow.svg"
-              alt="Arrow-Icon"
+              src={game.images.find((img) => img.type === "cover")?.url}
               loading="lazy"
-              className="brightness-50"
+              alt="cover-game"
+              className="aspect-square object-cover w-24 rounded-2xl"
             />
-            <p className="font-semibold text-xl">🔥5.000,00</p>
+            <div className="flex flex-col justify-between">
+              <div>
+                <p className="text-2xl font-semibold">{game.name}</p>
+                <p className="text-lg text-white/20">{game.publisher || "-"}</p>
+              </div>
+              <div className="flex gap-x-3 items-center">
+                <p className="text-white/20 line-through">
+                  {formatRupiah(game.priceBefore)}
+                </p>
+                <img
+                  src="/Icon/Arrow.svg"
+                  alt="Arrow-Icon"
+                  loading="lazy"
+                  className="brightness-50"
+                />
+                <p className="font-semibold text-xl">
+                  🔥{formatRupiah(game.priceAfter)}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-20">
+            <div>
+              <p className="font-bold text-3xl">1x</p>
+            </div>
+            <div>
+              <button onClick={() => handleRemove(game.id)}>
+                <img
+                  src="/Icon/Trash.svg"
+                  loading="lazy"
+                  alt="Trash-Icon"
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex gap-20">
-        <div>
-          <p className="font-bold text-3xl">1x</p>
-        </div>
-        <div>
-          <img src="/Icon/Trash.svg" loading="lazy" alt="Trash-Icon" />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
