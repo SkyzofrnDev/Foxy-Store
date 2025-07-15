@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { CardProduct } from "../../Components/Index";
-import { getCart, generateWhatsAppLink } from "../../Utils/Cart,jsx";
+import { getCart, generateWhatsAppLink } from "../../Utils/Cart.jsx";
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     setCart(getCart());
-  }, []);
+}, []);
 
-  const total = cart.reduce((sum, item) => sum + item.priceAfter * item.qty, 0);
-  const waLink = generateWhatsAppLink(cart);
+const total = cart.reduce((sum, item) => sum + item.priceAfter * item.qty, 0);
+const waLink = generateWhatsAppLink(cart);
 
   return (
     <div className="w-full mt-20">
@@ -53,6 +53,7 @@ const CartPage = () => {
       </div>
     </div>
   );
+
 };
 
 export default CartPage;

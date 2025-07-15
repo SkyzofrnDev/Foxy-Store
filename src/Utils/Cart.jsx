@@ -1,6 +1,17 @@
 export const getCart = () => {
   const cart = localStorage.getItem("cart");
-  return cart ? JSON.parse(cart) : [];
+  try {
+    const parsed = JSON.parse(cart);
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed.map(item => ({
+      ...item,
+      qty: Number(item.qty) || 1,
+      priceAfter: Number(item.priceAfter) || 0,
+    }));
+  } catch (e) {
+    return [];
+  }
 };
 
 export const addToCart = (item) => {

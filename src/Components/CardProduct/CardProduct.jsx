@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardProduct = () => {
   const [cart, setCart] = useState([]);
@@ -25,13 +26,13 @@ const CardProduct = () => {
   return (
     <div className="space-y-5">
       {cart.map((game) => (
-        <div
+        <Link to={"/produk/"+game.id}
           className="justify-between px-2 pr-20 py-2 flex bg-[#27282C] rounded-2xl items-center"
           key={game.id}
         >
           <div className="flex gap-5">
             <img
-              src={game.images.find((img) => img.type === "cover")?.url}
+              src={`/Games${game.images.find((img) => img.type === "cover")?.url}`}
               loading="lazy"
               alt="cover-game"
               className="aspect-square object-cover w-24 rounded-2xl"
@@ -59,7 +60,7 @@ const CardProduct = () => {
           </div>
           <div className="flex gap-20">
             <div>
-              <p className="font-bold text-3xl">1x</p>
+              <p className="font-bold text-2xl">1x</p>
             </div>
             <div>
               <button onClick={() => handleRemove(game.id)}>
@@ -71,7 +72,7 @@ const CardProduct = () => {
               </button>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
