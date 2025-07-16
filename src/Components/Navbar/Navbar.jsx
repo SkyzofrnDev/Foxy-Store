@@ -64,7 +64,12 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/checkout"
-            className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
+
+            className={({ isActive }) =>
+              `p-3 rounded-lg ease-in-out duration-150 mt-10 ${
+                isActive ? "bg-[#42AAFF]" : "hover:bg-[#42AAFF]"
+              }`
+            }
           >
             <img
               src="/Icon/Cart.svg"

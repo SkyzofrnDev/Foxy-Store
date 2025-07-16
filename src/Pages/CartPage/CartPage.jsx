@@ -1,16 +1,46 @@
+// CartPage.jsx
+
 import React, { useEffect, useState } from "react";
 import { CardProduct } from "../../Components/Index";
-import { getCart, generateWhatsAppLink } from "../../Utils/Cart.jsx";
+import {
+  getCart,
+  removeFromCart,
+  generateWhatsAppLink,
+} from "../../Utils/Cart";
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    setCart(getCart());
-}, []);
+  const loadCart = () => {
+    const currentCart = getCart();
+    setCart(currentCart);
+  };
 
-const total = cart.reduce((sum, item) => sum + item.priceAfter * item.qty, 0);
-const waLink = generateWhatsAppLink(cart);
+  // Load cart saat komponen mount
+  useEffect(() => {
+    loadCart();
+  }, []);
+
+  // Update cart saat localStorage berubah
+  // CartPage.jsx
+
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === "cart") {
+        const currentCart = getCart();
+        setCart(currentCart);
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
+  const total = cart.reduce((sum, item) => sum + item.priceAfter * item.qty, 0);
+  const waLink = generateWhatsAppLink(cart);
 
   return (
     <div className="w-full mt-20">
@@ -20,9 +50,9 @@ const waLink = generateWhatsAppLink(cart);
       </div>
       <div className="mt-20 flex gap-x-10">
         <div className="w-full">
-          <CardProduct />
+          <CardProduct cart={cart} setCart={setCart} />
         </div>
-        <div className="w-3/5 bg-[#27282C] px-7 py-5 rounded-2xl sticky">
+        <div className="w-3/5 bg-[#27282C] px-7 py-5 rounded-2xl h-fit top-20 sticky justify-around flex flex-col">
           <div className="border-b-2 border-white/20 pb-12">
             <p className="text-4xl font-semibold">Invoice Payment</p>
             <p className="text-3xl font-medium mt-10">Order Summary</p>
@@ -53,7 +83,6 @@ const waLink = generateWhatsAppLink(cart);
       </div>
     </div>
   );
-
 };
 
 export default CartPage;

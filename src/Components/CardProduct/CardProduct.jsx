@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const CardProduct = () => {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(storedCart);
-  }, []);
-
+const CardProduct = ({ cart, setCart }) => {
   const formatRupiah = (angka) => {
     return angka.toLocaleString("id-ID", {
       style: "currency",
@@ -21,6 +14,7 @@ const CardProduct = () => {
     const updated = cart.filter((item) => item.id !== id);
     localStorage.setItem("cart", JSON.stringify(updated));
     setCart(updated);
+    window.dispatchEvent(new Event("storage"));
   };
 
   return (
@@ -65,6 +59,7 @@ const CardProduct = () => {
             <div>
               <button onClick={() => handleRemove(game.id)}>
                 <img
+                className="select-none"
                   src="/Icon/Trash.svg"
                   loading="lazy"
                   alt="Trash-Icon"
