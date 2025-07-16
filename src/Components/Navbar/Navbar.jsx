@@ -63,7 +63,7 @@ const Navbar = () => {
             />
           </NavLink>
           <NavLink
-            to="/"
+            to="/checkout"
             className="hover:bg-[#42AAFF] p-3 rounded-lg ease-in-out duration-150 mt-10"
           >
             <img

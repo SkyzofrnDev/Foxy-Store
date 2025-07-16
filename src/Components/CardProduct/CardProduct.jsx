@@ -26,7 +26,7 @@ const CardProduct = () => {
   return (
     <div className="space-y-5">
       {cart.map((game) => (
-        <Link to={"/produk/"+game.id}
+        <div
           className="justify-between px-2 pr-20 py-2 flex bg-[#27282C] rounded-2xl items-center"
           key={game.id}
         >
@@ -37,7 +37,7 @@ const CardProduct = () => {
               alt="cover-game"
               className="aspect-square object-cover w-24 rounded-2xl"
             />
-            <div className="flex flex-col justify-between">
+            <Link to={"/produk/"+game.id} className="flex flex-col justify-between">
               <div>
                 <p className="text-2xl font-semibold">{game.name}</p>
                 <p className="text-lg text-white/20">{game.publisher || "-"}</p>
@@ -56,7 +56,7 @@ const CardProduct = () => {
                   🔥{formatRupiah(game.priceAfter)}
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="flex gap-20">
             <div>
@@ -72,7 +72,7 @@ const CardProduct = () => {
               </button>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
